@@ -1,0 +1,23 @@
+.btn-container {
+    width: 600px;
+}
+
+.btn {
+    display: block;
+    margin: 10px auto;
+}
+
+.grid-container {
+    height: 600px;
+    display: grid;
+    gap: 1px;
+    width: 600px;
+}
+
+.grid-item {
+    outline: 1px solid gray;
+}
+
+.grid-item.active {
+    background-color: gray;
+}

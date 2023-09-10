@@ -16,7 +16,14 @@ function clearExistingGrid() {
 }
 
 function onMouseover(e) {
-    e.target.classList.add('active')
+    currentBg = e.target.style.backgroundColor
+    e.target.style.backgroundColor = `rgba(0, 0, 0, ${progressiveDarkening(currentBg)})`
+}
+
+function progressiveDarkening(bg) {
+    if (bg === '') return '0.1'
+    const opacity = parseFloat(bg.split(',')[3])
+    return (opacity + 0.1).toString()
 }
 
 function onBtnClick(e) {
